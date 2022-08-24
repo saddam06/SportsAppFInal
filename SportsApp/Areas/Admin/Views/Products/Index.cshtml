@@ -1,0 +1,101 @@
+﻿@model IEnumerable<SportsApp.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+
+        select {
+        word-wrap: normal;
+        padding: 3.5px;
+        width: 13rem;
+    }
+</style>
+
+
+
+<form class="form-inline mt-md-3" method="get" asp-area="Admin" asp-controller="Products" asp-action="Index">
+
+<label for="SearchString"></label>
+
+    <select name="SeachString" id="Products">
+        <option value="">Select Category</option>
+        <option value="bench">Benches</option>
+        <option value="Chair">Chairs</option>
+        <option value="Umbrella">Umbrella Shades</option>
+        <option value="Bike">Bike Racks</option>
+        <option value="Kids">Kids Section</option> 
+        <option value="Cricket">Cricket</option>
+        <option value="Hockey">Hockey</option>
+        <option value="FootBall">FootBall</option>
+        
+     </select>
+    <input type="submit" value="Search" class="btn btn-dark text-white border-white" />
+</form>
+
+
+
+
+
+<div class="row">
+@foreach (var item in Model)
+
+
+{
+
+    
+       
+
+            <div class="col-md-3 mb-3 mt-2">
+                <div class="card mb-3"  style="height:100%">
+                    <div class="row g-0">
+                        <div class="col-md-12 p-0 text-center">
+
+                            
+                            <p><b>@item.ProductName</b> </p>
+                            
+
+
+                        </div>
+
+                           
+                        <div class="col-md-12 m-0">
+                            <img src="@item.ImgUrl" width="100%">
+                        </div>
+                        <div class="col-md-12">
+
+
+                            <div class="card-body">
+                                <p class="card-text">@item.ProductDescription</p>
+
+                                <p class="card-text bg-warning w-50 pl-2"><b>Price: </b>@item.Price</p>
+                                
+
+                                 
+
+                            <div>
+
+                                <a href="https://localhost:44368/Admin/BookingDetails/Create " class="btn btn-success text-center text-white">Book Now</a>
+                               
+                            </div>
+                            </div>
+                            
+                        </div>
+                        
+                    
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+      
+   
+
+}
+</div>
