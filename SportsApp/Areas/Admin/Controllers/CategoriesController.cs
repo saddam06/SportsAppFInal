@@ -12,6 +12,7 @@ using SportsApp.Models;
 namespace SportsApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles ="Admin1")]
     
     public class CategoriesController : Controller
     {
@@ -47,7 +48,7 @@ namespace SportsApp.Areas.Admin.Controllers
         }
 
         // GET: Admin/Categories/Create
-        [Authorize(Roles = "Admin1")]
+        
         public IActionResult Create()
         {
             return View();

@@ -24,7 +24,7 @@ namespace SportsApp.Areas.Admin.Controllers
         }
 
         // GET: Admin/BookingDetails
-        [Authorize(Roles = "Admin1")]
+        
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.BookingDetail.Include(b => b.Product);

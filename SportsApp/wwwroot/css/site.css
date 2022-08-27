@@ -22,6 +22,9 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+body {
+    background: linear-gradient(to right,#f8f9fa,#f8f9fa);
+}
 
 
 

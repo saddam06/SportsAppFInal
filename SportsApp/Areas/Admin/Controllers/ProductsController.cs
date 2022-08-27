@@ -12,7 +12,7 @@ using SportsApp.Models;
 namespace SportsApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    
     
     
     public class ProductsController : Controller
@@ -32,7 +32,7 @@ namespace SportsApp.Areas.Admin.Controllers
             var applicationDbContext = _context.Product.Include(p => p.Category);
             return View(await applicationDbContext.ToListAsync());
         }
-
+        //Implementing the search functionality here
         [HttpGet]
         public async Task <IActionResult> Index(string SeachString)
         {

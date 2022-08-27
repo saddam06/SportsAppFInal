@@ -121,6 +121,7 @@ namespace SportsApp.Areas.Admin.Controllers
         }
 
         // GET: Admin/Contacts/Delete/5
+        [Authorize(Roles="Admin1")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

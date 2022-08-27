@@ -16,7 +16,7 @@ namespace SportsApp.Models
         [Display(Name = "Select Product")]
         public int ProductId { get; set; }
 
-        [ForeignKey(nameof(BookingDetail.ProductId))]
+        [ForeignKey(nameof(BookingDetail.ProductId))] //mapping foreign key
         public Product Product { get; set; }
 
 

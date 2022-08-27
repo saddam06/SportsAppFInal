@@ -19,7 +19,7 @@ namespace SportsApp.Models
         [Display(Name = "Enter Sports Category")]
         public string CategoryName { get; set; }
 
-        public List<Product> Products { get; set; }
+        public List<Product> Products { get; set; }//A list of pruducts that a category can hold multiple products
 
 
 
